@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 4.0)
+project(VK_LAYER_EXT_zero_initialize_device_memory)
+set(CMAKE_CXX_STANDARD 26)
+add_library(VK_LAYER_EXT_zero_initialize_device_memory SHARED library.cpp)
+
+find_package(Vulkan REQUIRED)
+include_directories(Vulkan::Headers)
+target_link_libraries(VK_LAYER_EXT_zero_initialize_device_memory Vulkan::Vulkan)
